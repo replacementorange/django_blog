@@ -10,13 +10,12 @@ def blog_index(request):
     and render a template named index.html.
     """
 
-    posts = Post.objects.all().order_by("-created on")
+    posts = Post.objects.all().order_by("-created_on")
     context = {
         "posts": posts,
     }
 
-    return render(request, "blog/index.html")
-
+    return render(request, "blog/index.html", context)
 
 def blog_category(request, category):
     """
@@ -28,7 +27,7 @@ def blog_category(request, category):
 
     posts = Post.objects.filter(
         categories__name__contains=category
-    ).order_by("-created on")
+    ).order_by("-created_on")
     context = {
         "category": category,
         "posts": posts,
@@ -37,12 +36,12 @@ def blog_category(request, category):
     return render(request, "blog/category.html", context)
 
 
-def blog_details(request, pk):
+def blog_detail(request, pk):
     """
-    Requesting a single post with the specific primary key that is 
-    provided. Retrieves all the comments assigned to the given post.
-    If there is none comments, then the QuerySet is empty. 
-    Add post and comments to the context dictionary and render
+    Displays the full post. Requesting a single post with the specific 
+    primary key that is provided. Retrieves all the comments assigned
+    to the given post. If there is none comments, then the QuerySet is
+    empty. Add post and comments to the context dictionary and render
     a template named detail.html.
     """
 
