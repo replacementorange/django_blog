@@ -39,10 +39,10 @@ def blog_category(request, category):
 
 def blog_details(request, pk):
     """
-    Requesting a single post with the specific primary key that is 
-    provided. Retrieves all the comments assigned to the given post.
-    If there is none comments, then the QuerySet is empty. 
-    Add post and comments to the context dictionary and render
+    Displays the full post. Requesting a single post with the specific 
+    primary key that is provided. Retrieves all the comments assigned
+    to the given post. If there is none comments, then the QuerySet is
+    empty. Add post and comments to the context dictionary and render
     a template named detail.html.
     """
 
