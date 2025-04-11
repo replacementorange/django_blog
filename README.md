@@ -12,6 +12,12 @@ My personal learning outcomes in this project can answer the following questions
 - How to assign different categories to a post?
 - How to allow users to comment on the posts?
 
+Additionally, I became familiar with the following:
+
+- Learned how to generate and utilize a test coverage report.
+- Got familiar with VS Code's Copilot extension:
+    - My handwritten unit testing (82% coverage) attempts were destroyed by Copilot’s 94% coverage.
+
 ## Table of Contents
 
 - [Installation](#installation)
