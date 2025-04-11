@@ -1,0 +1,17 @@
+{
+    "python.testing.unittestArgs": [
+        "-v",
+        "-s",
+        "./django_blog",
+        "-p",
+        "test_*.py"
+    ],
+    "python.testing.pytestEnabled": false,
+    "python.testing.unittestEnabled": true,
+    "github.copilot.enable": {
+        "*": false,
+        "plaintext": false,
+        "markdown": false,
+        "scminput": false
+    }
+}
